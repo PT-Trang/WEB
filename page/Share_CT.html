@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share CT - Amour Tea</title>
+    <link rel="stylesheet" href="../style/style_guiCT.css">
+</head>
+<body>
+    <div class="website">
+        <!-- Header giống trang chủ -->
+        <div class="top-header">
+            <p class="welcome-text">Welcome to Amour Tea World</p>
+            <div class="auth-links">
+                <button class="account-link" id="open-auth-modal" aria-label="Mở modal đăng nhập hoặc đăng ký">
+                    <img src="../assest/user.png" alt="User icon" width="16" height="16"> 
+                        <p>Tài Khoản</p>
+                </button>
+                    <p class="hotline-text">Hotline:</p>
+                    <p class="phone-number">024 2218 5607</p> 
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <a href="../index.html" class="logo-title">Amour Tea</a>
+                <p class="logo-subtitle">The sweet spot for rich flavors</p>
+            </div>
+        </header>
+        
+        <!-- Navigation giống trang chủ -->
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="../index.html">
+                    <img src="../assest/Logo.jpg" alt="Amour Tea Logo">
+                </a>
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html"><p>HOME</p></a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../page/DanhSach.html"><p>MENU</p></a>
+                        <ul class="dropdown">
+                            <li><a href="../page/category_Tra.html">Trà</a></li>
+                            <li><a href="../page/category_Banh.html">Bánh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/blog.html"><p>BLOG</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/favorite.html"><p>FAVORITE</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/contact.html"><p>CONTACT</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/about_Us.html"><p>ABOUT US</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="search-box"> 
+                    <input type="text" class="search-text" placeholder="Enter your keywords..." required aria-label="Search keywords">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <img src="../assest/nut tim kiem.webp" alt="Search icon" width="16" height="16">
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Gửi Công Thức -->
+        <div class="recipe-form-layout">
+            <div class="recipe-form-container">
+                <h1 class="recipe-form-title">📝Gửi công thức cho chúng tôi</h1>
+                <form id="recipeForm" class="recipe-form">
+                    <div>
+                        <label for="title" class="recipe-form-label">📌 Tên công thức</label>
+                        <input type="text" id="title" name="title" required class="recipe-form-input" placeholder="VD: Trà sữa trân châu, Bánh su kem...">
+                    </div>
+
+                    <div>
+                        <label class="recipe-form-label">📷 Ảnh đại diện cho công thức</label>
+                        <div class="recipe-form-thumb-box">
+                            <input type="file" id="thumbnail" name="thumbnail" accept="image/*" class="recipe-form-file" onchange="previewThumbnail()">
+                            <div id="thumbnail-preview" class="recipe-form-thumb-preview">
+                                <span class="recipe-form-preview-text">Chọn ảnh</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="type" class="recipe-form-label">📝 Loại công thức</label>
+                        <select id="type" name="type" required class="recipe-form select">
+                            <option value="">-- Chọn loại --</option>
+                            <option value="tra">🍵 Trà</option>
+                            <option value="banh">🍰 Bánh</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="recipe-form-label">🧂 Nguyên liệu</label>
+                        <div id="ingredients-container" class="recipe-form-stack">
+                            <input type="text" name="ingredients[]" required class="recipe-form-input" placeholder="VD: 100g bột mì">
+                        </div>
+                        <div class="recipe-form-btn-group">
+                            <button type="button" onclick="addIngredient()" class="recipe-form-btn add">Thêm nguyên liệu</button>
+                            <button type="button" onclick="removeIngredient()" class="recipe-form-btn remove">Xóa</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="recipe-form-label">👨‍🍳 Cách làm</label>
+                        <div id="steps-container" class="recipe-form-stack">
+                            <div class="recipe-form-step">
+                                <span class="recipe-form-step-label">Bước 1:</span>
+                                <input type="text" name="steps[]" required class="recipe-form-input recipe-form-flex" placeholder="Mô tả bước 1...">
+                            </div>
+                        </div>
+                        <div class="recipe-form-btn-group">
+                            <button type="button" onclick="addStep()" class="recipe-form-btn add">Thêm bước</button>
+                            <button type="button" onclick="removeStep()" class="recipe-form-btn remove">Xóa</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="recipe-form-label">📷 Ảnh minh hoạ</label>
+                        <div class="recipe-form-img-box">
+                            <input type="file" id="image" name="images[]" accept="image/*" multiple class="recipe-form-file" onchange="previewImages()">
+                            <div class="recipe-form-text-center recipe-form-preview-text">
+                                <p>Kéo ảnh vào đây hoặc bấm để chọn ảnh</p>
+                            </div>
+                            <div id="preview-container" class="recipe-form-img-preview"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="author" class="recipe-form-label">✍️ Người gửi</label>
+                        <input type="text" id="author" name="author" required class="recipe-form-input" placeholder="Nhập tên bạn">
+                    </div>
+
+                    <div class="recipe-form-text-center">
+                        <button type="submit" class="recipe-form-btn-submit">📤 Gửi</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Auth Modal -->
+        <div class="auth-modal" id="auth-modal">
+            <div class="auth-modal-content">
+                <span class="auth-modal-close" id="close-auth-modal">&times;</span>
+                <div class="modal-logo">
+                    <img src="../assest/Logo.jpg" alt="Amour Tea Logo" class="logo-image">
+                </div>
+                
+                <div class="tab-content active" id="login">
+                    <h2>ĐĂNG NHẬP</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" placeholder="Mật khẩu">
+                    </div>
+                    <p class="forgot-password"><a href="#">Quên mật khẩu</a></p>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng nhập</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng nhập bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="../assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="../assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Chưa có tài khoản? <a href="#" class="switch-link" data-tab="register">Đăng ký</a></p>
+                </div>
+                <div class="tab-content" id="register">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div class="form-group">
+                        <label for="register-ho">Họ</label>
+                        <input type="text" id="register-ho" placeholder="Họ Tên">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Xác nhận lại mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Xác nhận lại mật khẩu">
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng ký</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng ký bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="../assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="../assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Bạn đã có tài khoản? <a href="#" class="switch-link" data-tab="login">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-categories">
+                    <a href="../page/category_Tra.html">Trà</a>
+                    <a href="../page/category_Banh.html">Bánh Ngọt</a>
+                    <a href="../page/blog.html">Blog</a>
+                    <a href="../page/about_Us.html">About us</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/19oYFrfBNa/" target="_blank" aria-label="Facebook">
+                        <img src="../assest/facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                        <img src="../assest/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="../assest/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <p>COPYRIGHT © 2025 Amour Tea - DESIGNED BY THT</p>
+            <button class="scroll-to-top" aria-label="Cuộn lên đầu">↑</button>
+        </footer>
+    </div>
+    <script src="../script/scrip.js"></script>
+    <script src="../script/script_guiCT.js"></script>
+    
+</body>
+</html>

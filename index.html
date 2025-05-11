@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amour Tea</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div class="website">
+        <div class="top-header">
+            <p class="welcome-text">Welcome to Amour Tea World</p>
+            <div class="auth-links">
+                <button class="account-link" id="open-auth-modal" aria-label="Mở modal đăng nhập hoặc đăng ký">
+                    <img src="assest/user.png" alt="User icon" width="16" height="16"> 
+                        <p>Tài Khoản</p>
+                </button>
+                    <p class="hotline-text">Hotline:</p>
+                    <p class="phone-number">024 2218 5607</p> 
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <a href="index.html" class="logo-title">Amour Tea</a>
+                <p class="logo-subtitle">The sweet spot for rich flavors</p>
+            </div>
+        </header>
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="assest/Logo.jpg" alt="Amour Tea Logo">
+                </a>
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.html"><p>HOME</p></a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="page/DanhSach.html"><p>MENU</p></a>
+                        <ul class="dropdown">
+                            <li><a href="page/category_Tra.html">Trà</a></li>
+                            <li><a href="page/category_Banh.html">Bánh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="page/blog.html"><p>BLOG</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="page/favorite.html"><p>FAVORITE</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="page/contact.html"><p>CONTACT</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="page/about_Us.html"><p>ABOUT US</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="search-box"> 
+                    <input type="text" class="search-text" placeholder="Enter your keywords..." required aria-label="Search keywords">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <img src="assest/nut tim kiem.webp" alt="Search icon" width="16" height="16">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active">
+                        <a href="page/category_Banh.html">
+                            <img src="assest/banh SL.jpg" alt="Delicious croissant with tea">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="page/category_Tra.html">
+                            <img src="assest/tra slider.jpg" alt="Refreshing tea selection">
+                        </a>
+                    </div>
+                </div>
+                <div class="Small-navigation">
+                    <button class="prev" aria-label="Previous slide">❮</button>
+                    <button class="next" aria-label="Next slide">❯</button>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                </div>
+            </div>
+            <!-- TOP LIST -->
+            <div class="main-content-wrapper">
+                <div class="content-sections">
+                    <div class="recommended-section">
+                        <h2>ĐỀ CỬ ĐẶC BIỆT</h2>
+                        <hr class="section-divider">
+                        <div class="recommended-grid-wrapper">
+                            <button class="scroll-prev recommended-scroll-prev" aria-label="Scroll left">❮</button>
+                            <div class="recommended-grid">
+
+                                <div class="recommended-item">
+                                    <img src="assest/saint_honore.jpg" alt="Saint-Honore Lemon Yuzu">
+                                    <div class="item-details">
+                                        <p class="item-category">BÁNH NGỌT</p>
+                                        <hr>
+                                        <h3 class="item-name">Saint-Honoré Lemon</h3>
+                                        <p class="item-description">Chiếc bánh đặc trưng với lớp vỏ bánh phồng, choux...</p>
+                                        <a class="cta-button" href="page/bia_croissaint.html">Xem ngay</a>
+                                    </div>
+                                </div>
+
+                                <div class="recommended-item">
+                                    <img src="assest/tra_Oolong.jpg" alt="Oolong Tea drink">
+                                    <div class="item-details">
+                                        <p class="item-category">TRÀ</p>
+                                        <hr>
+                                        <h3 class="item-name">Trà Ôlong</h3>
+                                        <p class="item-description">Mang hương thơm quyến rũ như cơn gió nhẹ đầu xuân...</p>
+                                        <a class="cta-button" href="page/bia_olong.html">Xem ngay</a>
+                                    </div>
+                                </div>
+
+                                <div class="recommended-item">
+                                    <img src="assest/Strawberry_Croissaint.webp" alt="Strawberry Croissants">
+                                    <div class="item-details">
+                                        <p class="item-category">BÁNH NGỌT</p>
+                                        <hr>
+                                        <h3 class="item-name">Strawberry Croissants</h3>
+                                        <p class="item-description">Bánh sừng bò vàng giòn, mềm mại với lớp kem trứng ...</p>
+                                        <a class="cta-button" href="page/bia_croissaint.html">Xem ngay</a>
+                                    </div>
+                                </div>
+
+                                <div class="recommended-item">
+                                    <img src="assest/tra_Den.jpg" alt="Green Tea drink">
+                                    <div class="item-details">
+                                        <p class="item-category">TRÀ</p>
+                                        <hr>
+                                        <h3 class="item-name">Trà Đen</h3>
+                                        <p class="item-description"> Bung tỏa hương vị nồng nàn, vị đậm đà lan tỏa mạnh mẽ..</p>
+                                        <a class="cta-button" href="page/bia_olong.html">Xem ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scroll-next recommended-scroll-next" aria-label="Scroll right">❯</button>
+                        </div>
+                    </div>
+                    <!-- PRODUCT LIST -->
+                    <div class="product-section">
+                        <h2>DANH SÁCH SẢN PHẨM</h2>
+                        <hr class="section-divider">
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/tra_ShanTuyet.jpg" alt="Trà Shan Tuyết" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">TRÀ</p>
+                                    <hr>
+                                    <h3 class="product-name">Trà Shan Tuyết</h3>
+                                    <p class="product-description">Hương trà cổ thụ đậm đà, vị chát nhẹ hòa quyện...</p>
+                                    <a class="cta-button" href="page/bia_olong.html">Xem ngay</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/tra_xanh.jpg" alt="Green Tea" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">TRÀ</p>
+                                    <hr>
+                                    <h3 class="product-name">Trà Xanh</h3>
+                                    <p class="product-description">Hương thơm mát lành, tinh khiết như sương sớm...</p>
+                                    <a class="cta-button" href="page/bia_olong.html">Xem ngay</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/tra_lai.jpg" alt="Jasmine Tea" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">TRÀ</p>
+                                    <hr>
+                                    <h3 class="product-name">Trà Lài</h3>
+                                    <p class="product-description">Hương lài dịu nhẹ, thanh thoát, hòa quyện với vị trà...</p>
+                                    <a class="cta-button" href="page/bia_olong.html">Xem ngay</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/mousse.jpg" alt="Mousse Blueberry" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">BÁNH NGỌT</p>
+                                    <hr>
+                                    <h3 class="product-name">Mousse Blueberry</h3>
+                                    <p class="product-description">Lớp mousse việt quất mịn màng, ngọt dịu, kết hợp...</p>
+                                    <a class="cta-button" href="page/bia_croissaint.html">Xem ngay</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/le-paris-breat.jpg" alt="Le Paris Breat" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">BÁNH NGỌT</p>
+                                    <hr>
+                                    <h3 class="product-name">Le Paris Breat</h3>
+                                    <p class="product-description">Bánh ngọt phong cách Pháp, mềm mịn với lớp kem béo...</p>
+                                    <a class="cta-button" href="page/bia_croissaint.html">Xem ngay</a>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image-container">
+                                    <img src="assest/saint_honore.jpg" alt="Saint-Honore Lemon Yuzu" class="product-image">
+                                </div>
+                                <div class="product-details">
+                                    <p class="item-category">BÁNH NGỌT</p>
+                                    <hr>
+                                    <h3 class="product-name">Saint-Honoré Lemon</h3>
+                                    <p class="product-description">Chiếc bánh đặc trưng với lớp vỏ bánh phồng, choux...</p>
+                                    <a class="cta-button" href="page/bia_croissaint.html">Xem ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category -->
+                    <div class="category-section">
+                        <h2>DANH MỤC SẢN PHẨM</h2>
+                        <hr class="section-divider">
+                        <div class="category-grid">
+                            <a href="page/category_Tra.html" class="category-card">
+                                <img src="assest/tra_Danhmuc.jpg" alt="Trà">
+                                <div class="category-info">
+                                    <h3>TRÀ</h3>
+                                    <p>5 sản phẩm</p>
+                                </div>
+                            </a>
+                            <a href="page/category_Banh.html" class="category-card">
+                                <img src="assest/banh_Danhmuc.jpg" alt="Bánh Ngọt">
+                                <div class="category-info">
+                                    <h3>BÁNH NGỌT</h3>
+                                    <p>5 sản phẩm</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- LATES NEWS -->
+                    <div class="latest-news-section">
+                        <h2>TIN TỨC MỚI NHẤT</h2>
+                        <hr class="section-divider">
+                        <div class="news-grid-wrapper">
+                            <button class="scroll-prev news-scroll-prev" aria-label="Scroll left">❮</button>
+                            <div class="news-grid">
+
+                                <div class="news-item">
+                                    <img src="assest/vh_tra.jpg" alt="Văn hoá trà chiều">
+                                    <div class="news-item-details">
+                                        <p class="news-item-name">VĂN HOÁ TRÀ CHIỀU</p>
+                                        <hr>
+                                        <p class="news-item-description">Tìm hiểu về lịch sử và phong tục thú vị của trà chiều</p>
+                                        <a class="cta-button" href="page/News_VanHoaTraChieu.html">Xem ngay</a>
+                                    </div>
+                                </div>
+
+                                <div class="news-item">
+                                    <img src="assest/cong_thuc_banh.jpg" alt="Công thức bánh mới">
+                                    <div class="news-item-details">
+                                        <p class="news-item-name">CÔNG THỨC BÁNH MỚI NHẤT</p>
+                                        <hr>
+                                        <p class="news-item-description">Khám phá các công thức độc đáo và dễ làm tại nhà</p>
+                                        <a class="cta-button" href="page/News_CongThucBanh.html">Xem ngay</a>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="news-item">
+                                    <img src="assest/trang_tri.jpg" alt="Nghệ thuật trang trí bánh">
+                                    <div class="news-item-details">
+                                        <p class="news-item-name">NGHỆ THUẬT TRANG TRÍ BÁNH</p>
+                                        <hr>
+                                        <p class="news-item-description">Các kỹ thuật và ý tưởng sáng tạo để làm cho chiếc bánh</p>
+                                        <a class="cta-button" href="page/News_TrangTriBanh.html">Xem ngay</a>
+                                    </div>
+                                </div>
+                                <div class="news-item">
+                                    <img src="assest/Bi_quyet_tra.jpg" alt="Bí quyết chọn trà ngon">
+                                    <div class="news-item-details">
+                                        <p class="news-item-name">BÍ QUYẾT CHỌN TRÀ NGON</p>
+                                        <hr>
+                                        <p class="news-item-description">Tìm hiểu các loại trà phổ biến và cách chọn trà</p>
+                                        <a class="cta-button" href="page/News_BiQuyetTraNgon.html">Xem ngay</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="scroll-next news-scroll-next" aria-label="Scroll right">❯</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar-container">
+                    <div class="sidebar">
+                        <div class="sidebar-block">
+                            <h2>Latest Posts</h2>
+                            <ul>
+                                <li><span>1</span><a href="page/CT_olong.html">Trà Shan Tuyết</a></li>
+                                <li><span>2</span><a href="page/CT_croissant.html">Bánh Mousse Blueberry</a></li>
+                                <li><span>3</span><a href="page/CT_croissant.html">Le Paris Breat</a></li>
+                                <li><span>4</span><a href="page/CT_olong.html">Trà Xanh</a></li>
+                                <li><span>5</span><a href="page/CT_croissant.html">Bánh Tiramisu Classic</a></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-block">
+                            <h2>Recent Comments</h2>
+                            <ul class="comment-list">
+                                <li class="comment-item">
+                                    <span>1</span>
+                                    <div class="comment-content">
+                                        <p class="comment-author">Anna</p>
+                                        <p class="comment-text">Trà Shan Tuyết thật sự đậm đà, rất thích hương vị này!</p>
+                                        <p class="comment-time">2 giờ trước</p>
+                                    </div>
+                                </li>
+                                <li class="comment-item">
+                                    <span>2</span>
+                                    <div class="comment-content">
+                                        <p class="comment-author">Minh</p>
+                                        <p class="comment-text">Mousse Blueberry mềm mịn, ăn là ghiền!</p>
+                                        <p class="comment-time">4 giờ trước</p>
+                                    </div>
+                                </li>
+                                <li class="comment-item">
+                                    <span>3</span>
+                                    <div class="comment-content">
+                                        <p class="comment-author">Linh</p>
+                                        <p class="comment-text">Trà Xanh tươi mát, rất hợp để thư giãn.</p>
+                                        <p class="comment-time">1 ngày trước</p>
+                                    </div>
+                                </li>
+                                <li class="comment-item">
+                                    <span>4</span>
+                                    <div class="comment-content">
+                                        <p class="comment-author">Hùng</p>
+                                        <p class="comment-text">Tiramisu ở đây đúng chuẩn Ý, tuyệt vời!</p>
+                                        <p class="comment-time">2 ngày trước</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Auth Modal -->
+        <div class="auth-modal" id="auth-modal">
+            <div class="auth-modal-content">
+                <span class="auth-modal-close" id="close-auth-modal">&times;</span>
+                <div class="modal-logo">
+                    <img src="assest/Logo.jpg" alt="Amour Tea Logo" class="logo-image">
+                </div>
+                
+                <div class="tab-content active" id="login">
+                    <h2>ĐĂNG NHẬP</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" placeholder="Mật khẩu">
+                    </div>
+                    <p class="forgot-password"><a href="#">Quên mật khẩu</a></p>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng nhập</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng nhập bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Chưa có tài khoản? <a href="#" class="switch-link" data-tab="register">Đăng ký</a></p>
+                </div>
+                <div class="tab-content" id="register">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div class="form-group">
+                        <label for="register-ho">Họ</label>
+                        <input type="text" id="register-ho" placeholder="Họ Tên">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Xác nhận lại mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Xác nhận lại mật khẩu">
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng ký</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng ký bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Bạn đã có tài khoản? <a href="#" class="switch-link" data-tab="login">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-categories">
+                    <a href="page/category_Tra.html">Trà</a>
+                    <a href="page/category_Banh.html">Bánh Ngọt</a>
+                    <a href="page/blog.html">Blog</a>
+                    <a href="page/about_Us.html">About us</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/19oYFrfBNa/" target="_blank" aria-label="Facebook">
+                        <img src="assest/facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                        <img src="assest/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="assest/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <p>COPYRIGHT © 2025 Amour Tea - DESIGNED BY THT</p>
+            <button class="scroll-to-top" aria-label="Cuộn lên đầu">↑</button>
+        </footer>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>

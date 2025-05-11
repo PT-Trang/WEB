@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Favorite - Amour Tea</title>
+    <link rel="stylesheet" href="../style/style_favorite.css">
+</head>
+<body>
+    <div class="website">
+        <!-- Header giống trang chủ -->
+        <div class="top-header">
+            <p class="welcome-text">Welcome to Amour Tea World</p>
+            <div class="auth-links">
+                <button class="account-link" id="open-auth-modal" aria-label="Mở modal đăng nhập hoặc đăng ký">
+                    <img src="../assest/user.png" alt="User icon" width="16" height="16"> 
+                        <p>Tài Khoản</p>
+                </button>
+                    <p class="hotline-text">Hotline:</p>
+                    <p class="phone-number">024 2218 5607</p> 
+            </div>
+        </div>
+        <header class="header">
+            <div class="logo">
+                <a href="../index.html" class="logo-title">Amour Tea</a>
+                <p class="logo-subtitle">The sweet spot for rich flavors</p>
+            </div>
+        </header>
+        <!-- Navigation giống trang chủ -->
+        <nav class="navigation">
+            <div class="nav-logo">
+                <a href="home.html">
+                    <img src="../assest/Logo.jpg" alt="Amour Tea Logo">
+                </a>
+            </div>
+            <div class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="../index.html"><p>HOME</p></a>
+                    </li>
+                    <li class="nav-item has-dropdown">
+                        <a href="../page/DanhSach.html"><p>MENU</p></a>
+                        <ul class="dropdown">
+                            <li><a href="../page/category_Tra.html">Trà</a></li>
+                            <li><a href="../page/category_Banh.html">Bánh</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/blog.html"><p>BLOG</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/favorite.html"><p>FAVORITE</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/contact.html"><p>CONTACT</p></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../page/about_Us.html"><p>ABOUT US</p></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="search-box"> 
+                    <input type="text" class="search-text" placeholder="Enter your keywords..." required aria-label="Search keywords">
+                    <button type="submit" class="search-btn" aria-label="Search">
+                        <img src="../assest/nut tim kiem.webp" alt="Search icon" width="16" height="16">
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Danh Sách  -->
+        <div class="list-search-bar">
+            <input type="text" id="searchInput" placeholder="Tìm món trà hoặc bánh..." oninput="filterRecipes()" /> <a href="../page/favorite.html" class="fav-icon">❤️</a>
+          </div>
+    
+          <div class="list-section">
+              <h2>Must Try</h2>
+              <br>
+              <div class="list-grid" id="tea-list">
+                  <div class="list-item" data-name="Trà đen">
+                      <img src="../assest/tra_Den.jpg" alt="Trà đen" class="list-item__img">
+                      <h3 class="list-item__h3">Trà đen</h3>
+                      <p class="list-item__p">Trà đen hương vị đậm đà, lý tưởng để bắt đầu một buổi sáng đầy năng lượng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(1, 'Trà đen')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Mousse Blueberry">
+                    <img src="../assest/mousse.jpg" alt="Mousse Blueberry" class="list-item__img">
+                    <h3 class="list-item__h3">Mousse Blueberry</h3>
+                    <p class="list-item__p">Món bánh lạnh nhẹ nhàng, mang lại cảm giác dễ chịu và sảng khoái.</p>
+                    <button class="list-item__button" onclick="addToFavorites(9, 'Mousse Blueberry')">Thêm vào yêu thích</button>
+                </div>
+    
+                  <div class="list-item" data-name="Croissant">
+                      <img src="../assest/Strawberry_Croissaint.webp" alt="Croissant" class="list-item__img">
+                      <h3 class="list-item__h3">Strawberry croissant</h3>
+                      <p class="list-item__p">Bánh sừng bò dâu tây, lý tưởng cho bữa sáng cùng một tách trà nóng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(7, 'Croissant')">Thêm vào yêu thích</button>
+                  </div>
+              </div><br>
+              
+              <h2>Món Trà</h2>
+              <br>
+              <div class="list-grid" id="tea-list">
+                  <div class="list-item" data-name="Trà đen">
+                      <img src="../assest/tra_Den.jpg" alt="Trà đen" class="list-item__img">
+                      <h3 class="list-item__h3">Trà đen</h3>
+                      <p class="list-item__p">Trà đen hương vị đậm đà, lý tưởng để bắt đầu một buổi sáng đầy năng lượng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(1, 'Trà đen')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Trà xanh">
+                      <img src="../assest/tra_xanh.jpg" alt="Trà xanh" class="list-item__img">
+                      <h3 class="list-item__h3">Trà xanh (khô)</h3>
+                      <p class="list-item__p">Trà xanh - hương vị tự nhiên, thích hợp cho những lúc cần thư giãn nhẹ nhàng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(2, 'Trà xanh (khô)')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Trà ô long">
+                      <img src="../assest/tra_Oolong.jpg" alt="Trà ô long" class="list-item__img">
+                      <h3 class="list-item__h3">Trà ô long</h3>
+                      <p class="list-item__p">Trà ô long có hương thơm tinh tế, thích hợp trong các buổi trà chiều thanh nhã.</p>
+                      <button class="list-item__button" onclick="addToFavorites(3, 'Trà ô long')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Trà lài">
+                      <img src="../assest/tra_lai.jpg" alt="Trà lài" class="list-item__img">
+                      <h3 class="list-item__h3">Trà lài - Trà ướp hoa lài</h3>
+                      <p class="list-item__p">Trà lài mang đến cảm giác thư thái rất phù hợp với không gian yên tĩnh, thư giãn.</p>
+                      <button class="list-item__button" onclick="addToFavorites(4, 'Trà lài - Trà ướp hoa lài')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Trà Shan tuyết">
+                      <img src="../assest/tra_ShanTuyet.jpg" alt="Trà Shan tuyết" class="list-item__img">
+                      <h3 class="list-item__h3">Trà Shan tuyết cổ thụ - Bạch trà</h3>
+                      <p class="list-item__p">Loại trà quý mang hương thơm nhẹ, là lựa chọn cho người yêu trà truyền thống.</p>
+                      <button class="list-item__button" onclick="addToFavorites(5, 'Trà Shan tuyết cổ thụ - Bạch trà')">Thêm vào yêu thích</button>
+                  </div>
+              </div>
+          </div>
+    
+          <div class="list-section">
+              <h2>Món Bánh</h2><br>
+              <div class="list-grid" id="cake-list">
+                  <div class="list-item" data-name="Saint-Honoré lemon yuzu">
+                      <img src="../assest/saint_honore.jpg" alt="Saint-Honoré lemon yuzu" class="list-item__img">
+                      <h3 class="list-item__h3">Saint-Honoré lemon yuzu</h3>
+                      <p class="list-item__p">Món bánh Pháp cầu kỳ với nhân kem béo nhẹ, tạo cảm giác vừa lạ vừa sang trọng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(6, 'Saint-Honoré lemon yuzu')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Croissant">
+                      <img src="../assest/Strawberry_Croissaint.webp" alt="Croissant" class="list-item__img">
+                      <h3 class="list-item__h3">Strawberry croissant</h3>
+                      <p class="list-item__p">Bánh sừng bò dâu tây, lý tưởng cho bữa sáng cùng một tách trà nóng.</p>
+                      <button class="list-item__button" onclick="addToFavorites(7, 'Croissant')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Tiramisu Classic">
+                      <img src="../assest/tiraimisu.jpg" alt="Tiramisu Classic" class="list-item__img">
+                      <h3 class="list-item__h3">Tiramisu Classic</h3>
+                      <p class="list-item__p">Bánh tráng miệng nổi tiếng từ Ý với lớp kem béo nhẹ, xen lẫn vị cà phê đậm đà.</p>
+                      <button class="list-item__button" onclick="addToFavorites(8, 'Tiramisu Classic')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Mousse Blueberry">
+                      <img src="../assest/mousse.jpg" alt="Mousse Blueberry" class="list-item__img">
+                      <h3 class="list-item__h3">Mousse Blueberry</h3>
+                      <p class="list-item__p">Món bánh lạnh nhẹ nhàng, mang lại cảm giác dễ chịu và sảng khoái.</p>
+                      <button class="list-item__button" onclick="addToFavorites(9, 'Mousse Blueberry')">Thêm vào yêu thích</button>
+                  </div>
+    
+                  <div class="list-item" data-name="Le Paris Breat">
+                      <img src="../assest/le-paris-breat.jpg" alt="Le Paris Breat" class="list-item__img">
+                      <h3 class="list-item__h3">Le Paris Breat</h3>
+                      <p class="list-item__p">Bánh vòng truyền thống, rất hợp với trà ô long hoặc trà lài.</p>
+                      <button class="list-item__button" onclick="addToFavorites(10, 'Le Paris Breat')">Thêm vào yêu thích</button>
+                  </div>
+              </div>
+          </div>
+              <a href="../page/favorite.html" class="list-a">Xem danh sách yêu thích</a><br>
+
+        <!-- Auth Modal -->
+        <div class="auth-modal" id="auth-modal">
+            <div class="auth-modal-content">
+                <span class="auth-modal-close" id="close-auth-modal">&times;</span>
+                <div class="modal-logo">
+                    <img src="../assest/Logo.jpg" alt="Amour Tea Logo" class="logo-image">
+                </div>
+                
+                <div class="tab-content active" id="login">
+                    <h2>ĐĂNG NHẬP</h2>
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Mật khẩu</label>
+                        <input type="password" id="login-password" placeholder="Mật khẩu">
+                    </div>
+                    <p class="forgot-password"><a href="#">Quên mật khẩu</a></p>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng nhập</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng nhập bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="../assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="../assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Chưa có tài khoản? <a href="#" class="switch-link" data-tab="register">Đăng ký</a></p>
+                </div>
+                <div class="tab-content" id="register">
+                    <h2>ĐĂNG KÝ</h2>
+                    <div class="form-group">
+                        <label for="register-ho">Họ</label>
+                        <input type="text" id="register-ho" placeholder="Họ Tên">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Mật khẩu">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Xác nhận lại mật khẩu</label>
+                        <input type="password" id="register-password" placeholder="Xác nhận lại mật khẩu">
+                    </div>
+                    <div class="button-wrapper">
+                        <button class="button primary">Đăng ký</button>
+                    </div>
+                    <div class="social-login">
+                        <p class="divider-text"><span>Hoặc đăng ký bằng</span></p>
+                        <div class="social-buttons">
+                            <button class="button facebook">
+                                <img src="../assest/Đăng nhập.png" alt="Facebook">
+                                Facebook
+                            </button>
+                            <button class="button google">
+                                <img src="../assest/đăng ký.png" alt="Google">
+                                Google
+                            </button>
+                        </div>
+                    </div>
+                    <p class="switch-tab">Bạn đã có tài khoản? <a href="#" class="switch-link" data-tab="login">Đăng nhập</a></p>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-categories">
+                    <a href="../page/category_Tra.html">Trà</a>
+                    <a href="../page/category_Banh.html">Bánh Ngọt</a>
+                    <a href="../page/blog.html">Blog</a>
+                    <a href="../page/about_Us.html">About us</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/share/19oYFrfBNa/" target="_blank" aria-label="Facebook">
+                        <img src="../assest/facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                        <img src="../assest/tiktok.png" alt="TikTok">
+                    </a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                        <img src="../assest/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <p>COPYRIGHT © 2025 Amour Tea - DESIGNED BY THT</p>
+            <button class="scroll-to-top" aria-label="Cuộn lên đầu">↑</button>
+        </footer>
+    </div>
+    <script src="../script/script.js"></script>
+    <script src="../script/script_favorite.js"></script>
+    
+</body>
+</html>
