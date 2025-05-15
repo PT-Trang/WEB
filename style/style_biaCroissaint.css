@@ -582,7 +582,7 @@ html, body {
     letter-spacing: 0.8px;
     }
     
-    .croissant-jump-button\:hover {
+    .croissant-jump-button:hover {
     background-color: #333;
     }
     .croissant-extra img {
@@ -653,8 +653,8 @@ html, body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     }
-    .croissant-card\:hover {
-    transform: translateY(-6px);
+    .croissant-card:hover {
+    transform: scale(1.02);
     }
     
     .croissant-card img {
@@ -688,7 +688,7 @@ html, body {
     border-radius: 50%;
     }
     
-    .croissant-btn\:hover {
+    .croissant-btn:hover {
     opacity: 1;
     }
     
@@ -809,10 +809,7 @@ html, body {
     
     .background-sidebar{
     height: 1710px;
-    background-image: url('');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: white;
     width: 100%;                  /* Chiều rộng đầy đủ */
     }
     .social-icons a {
@@ -822,7 +819,7 @@ html, body {
     transition: color 0.3s ease;
     }
     
-    .social-icons a\:hover {
+    .social-icons a:hover {
     color: #c59c7e;
     transform: scale(1,05);
     }
@@ -831,7 +828,7 @@ html, body {
     color: #000;
     font-weight: bold;
     }
-    .read-more a\:hover {
+    .read-more a:hover {
     color: #c26f5c;
     transform: scale(1.03);
     }

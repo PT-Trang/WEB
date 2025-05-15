@@ -485,33 +485,6 @@ body.recipe-form-bg {
     
 }
 
-.recipe-form-sidebar {
-    width: 280px;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    max-height: 350px;
-    overflow-y: auto;
-    border: 1px solid #eee;
-}
-
-.recipe-form-sidebar::-webkit-scrollbar {
-    width: 4px;
-}
-
-.recipe-form-sidebar::-webkit-scrollbar-thumb {
-    background-color: #ddd;
-    border-radius: 2px;
-}
-
-.recipe-form-sidebar h2 {
-    color: #555;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
 .recipe-form-container {
     flex: 1;
     background-color: #fff;
@@ -610,7 +583,7 @@ body.recipe-form-bg {
 }
 
 .recipe-form-step-label {
-    width: 4rem;
+    width: 5rem;
     font-weight: 500;
     color: #555;
     font-size: 1.1rem;
@@ -689,52 +662,6 @@ body.recipe-form-bg {
 
 .recipe-form-text-center {
     text-align: left;
-}
-
-/* Styles for the posted recipes sidebar section */
-#recipe-form-posted-recipes {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-#recipe-form-posted-recipes > div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid #eee;
-}
-
-#recipe-form-posted-recipes > div:last-child {
-    border-bottom: none;
-}
-
-#recipe-form-posted-recipes img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 0.25rem;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-    border: 1px solid #ddd;
-}
-
-#recipe-form-posted-recipes div > div {
-    flex-grow: 1;
-    min-width: 0;
-}
-
-#recipe-form-posted-recipes strong {
-    display: block;
-    font-size: 0.9rem;
-    color: #333;
-    margin-bottom: 0.1rem;
-}
-
-#recipe-form-posted-recipes small {
-    color: #777;
-    font-style: normal;
-    font-size: 0.8rem;
 }
 
 /* FOOTER */
@@ -890,12 +817,6 @@ body.recipe-form-bg {
         margin: 1rem auto;
     }
 
-    .recipe-form-sidebar {
-        width: 100%;
-        max-height: none;
-        margin-bottom: 1rem;
-    }
-
     .recipe-form-container {
         padding: 1rem;
     }
@@ -954,21 +875,4 @@ body.recipe-form-bg {
         text-align: left;
     }
 
-    #recipe-form-posted-recipes {
-        gap: 0.3rem;
-    }
-
-    #recipe-form-posted-recipes img {
-        width: 30px;
-        height: 30px;
-    }
-
-    #recipe-form-posted-recipes strong {
-        font-size: 0.8rem;
-        margin-bottom: 0;
-    }
-
-    #recipe-form-posted-recipes small {
-        font-size: 0.7rem;
-    }
 }

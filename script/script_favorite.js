@@ -94,7 +94,9 @@ function renderFavorites() {
             const div = document.createElement('div');
             div.className = 'fav-card';
             div.innerHTML = `
+                <a href="../page/bia_croissaint.html">
                 <img src="${item.image}" alt="${item.name}" class="fav-card__img">
+                </a>
                 <h3 class="fav-card__title">${item.name}</h3>
                 <p class="fav-card__desc">${item.desc}</p>
                 <button class="fav-remove-button" onclick="removeFavorite(${item.id})">Xóa khỏi yêu thích</button>
@@ -116,6 +118,5 @@ function removeFavorite(id) {
 }
 
 renderFavorites();
-
 
 

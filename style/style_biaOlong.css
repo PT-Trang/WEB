@@ -581,7 +581,7 @@ html, body {
     letter-spacing: 0.8px;
     }
     
-    .Olong-jump-button\:hover {
+    .Olong-jump-button:hover {
     background-color: #333;
     }
     .Olong-extra img {
@@ -652,8 +652,8 @@ html, body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     overflow: hidden;
     }
-    .Olong-card\:hover {
-    transform: translateY(-6px);
+    .Olong-card:hover {
+    transform: scale(1.02);
     }
     
     .Olong-card img {
@@ -687,7 +687,7 @@ html, body {
     border-radius: 50%;
     }
     
-    .Olong-btn\:hover {
+    .Olong-btn:hover {
     opacity: 1;
     }
     
@@ -828,7 +828,7 @@ html, body {
     transition: color 0.3s ease;
     }
     
-    .social-icons a\:hover {
+    .social-icons a:hover {
     color: #c59c7e;
     transform: scale(1,05);
     }
@@ -837,7 +837,7 @@ html, body {
     color: #000;
     font-weight: bold;
     }
-    .read-more a\:hover {
+    .read-more a:hover {
     color: #c26f5c;
     transform: scale(1.03);
     }    
